@@ -23,6 +23,13 @@ export const HeaderContent = styled("div")`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  width: 90%;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const HeaderLogoContainer = styled("div")`
@@ -40,7 +47,7 @@ export const HeaderLinks = styled("div")`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 15px;
+  font-size: 16px;
 
   @media screen and (max-width: 768px) {
     display: none;

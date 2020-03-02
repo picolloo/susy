@@ -20,17 +20,17 @@ const Header = ({ siteTitle }) => (
       </HeaderLogoContainer>
 
       <HeaderLinks>
-        <Link to="#" activeClassName="Link--is-active">
-          Home
-        </Link>
-        <Link to="#" activeClassName="Link--is-active">
-          Serviços
-        </Link>
-        <Link to="#" activeClassName="Link--is-active">
+        <Link to="#works" activeClassName="Link--is-active">
           Como funciona
         </Link>
-        <Link to="#" activeClassName="Link--is-active">
-          Depoimentos
+        <Link to="#services" activeClassName="Link--is-active">
+          Serviços
+        </Link>
+        <Link to="#pricing" activeClassName="Link--is-active">
+          Preços
+        </Link>
+        <Link to="#faq" activeClassName="Link--is-active">
+          FAQ
         </Link>
 
         <button>
