@@ -17,10 +17,12 @@ export const LayoutContainer = styled.div`
 
   padding: 1.5rem 0;
   background-image: url(${HeroBg});
+  background-repeat: no-repeat;
+  background-position: center;
 `
 
 export const LayoutContent = styled.main`
-  max-width: 960px;
+  max-width: 1020px;
   margin: auto;
   font-family: "Livvic", sans-serif;
 `
