@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+
 import colors from "../../styles/colors"
+import HeroImage from "../../images/hero-rocket.svg"
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +14,7 @@ export const Container = styled.div`
 export const HeroCTA = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
 
   > h1 {
     font-size: 60px;
@@ -37,7 +39,9 @@ export default function Hero() {
         <button>Faça um orçamento</button>
       </HeroCTA>
 
-      <div></div>
+      <div>
+        <img src={HeroImage} alt="girl in a rocket" />
+      </div>
     </Container>
   )
 }
