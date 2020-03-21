@@ -7,6 +7,7 @@ export const LayoutContainer = styled.div`
   background-image: url(${HeroBg});
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 `
 
 export const LayoutContent = styled.main`

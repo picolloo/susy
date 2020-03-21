@@ -8,13 +8,25 @@ export const Container = styled.div`
   display: flex;
   font-family: "Livvic", sans-serif;
   color: white;
-  margin: 200px auto 110px;
+  margin: 4rem auto;
+  /* padding-bottom: 10rem; */
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin: 150px auto 110px;
+  }
 `
 
 export const HeroCTA = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: inherit;
+  }
 
   > h1 {
     font-size: 60px;
@@ -28,6 +40,21 @@ export const HeroCTA = styled.div`
     background: ${colors.secondary};
     width: 250px;
     height: 50px;
+    margin: auto;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
+  }
+`
+
+export const ImageContainer = styled.div`
+  width: 80%;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin: 0;
   }
 `
 
@@ -39,9 +66,9 @@ export default function Hero() {
         <button>Faça um orçamento</button>
       </HeroCTA>
 
-      <div>
+      <ImageContainer>
         <img src={HeroImage} alt="girl in a rocket" />
-      </div>
+      </ImageContainer>
     </Container>
   )
 }

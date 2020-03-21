@@ -1,18 +1,32 @@
 [
   {
     "id": 0,
-    "name": "service one"
+    "name": "Eventos e agenda",
+    "topics": ["Compra de passagens", "Orçamentos", "Agendamentos", "Hotéis"]
   },
   {
     "id": 1,
-    "name": "service two"
+    "name": "Financeiro",
+    "topics": [
+      "Contas a pagar",
+      "Controle de despesas",
+      "Compras online",
+      "Gestão de milhagens"
+    ]
   },
   {
     "id": 2,
-    "name": "service three"
+    "name": "Comunicação",
+    "topics": [
+      "Apresentações",
+      "Redes sociais",
+      "Gestão de emails",
+      "Atendimento telefônico"
+    ]
   },
   {
     "id": 3,
-    "name": "service four"
+    "name": "Documentação",
+    "topics": ["Arquivamento", "Formatação", "Organização"]
   }
 ]
