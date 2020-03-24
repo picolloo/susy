@@ -1,17 +1,12 @@
 import styled from "styled-components"
 
-import HeroBg from "../../images/hero-bg.svg"
-
 export const LayoutContainer = styled.div`
-  padding: 0 1.5em;
-  background-image: url(${HeroBg});
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background: #fff;
+  min-width: 400px;
+  min-height: 100vh;
+  height: 100%;
 `
 
 export const LayoutContent = styled.main`
-  max-width: 1020px;
   margin: 0 auto;
-  font-family: "Livvic", sans-serif;
 `
