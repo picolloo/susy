@@ -1,53 +1,8 @@
 import React from "react"
-import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 
-import colors from "../../styles/colors"
 import ServiceCard from "../ServiceCard"
-
-export const Container = styled.div`
-  max-width: 978px;
-  width: 100%;
-  background: #ffffff;
-
-  border-radius: 18px;
-  padding: 1rem;
-
-  /* box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.1); */
-  /* position: absolute;
-  top: 780px;
-  z-index: 2; */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (min-width: 768px) {
-    padding: 3rem;
-  }
-`
-export const Content = styled.div`
-  text-align: center;
-  color: ${colors.gray};
-  font-family: "Livvic", sans-serif;
-
-  h3 {
-    font-weight: 700;
-    font-family: "Livvic", sans-serif;
-  }
-`
-
-export const ServiceList = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* display: grid;
-    grid-template: repeat(1fr, 2) / repeat(1fr, 2); */
-  }
-`
+import { Container, HeaderContent, ServicesContent } from "./styles"
 
 export default function Services() {
   const {
@@ -59,7 +14,7 @@ export default function Services() {
           node {
             id
             name
-            topics
+            description
           }
         }
       }
@@ -68,15 +23,43 @@ export default function Services() {
 
   return (
     <Container>
-      <Content>
-        <h2>Serviços</h2>
+      <HeaderContent>
+        <h2>Conheça nossos serviços</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+          molestiae blanditiis quibusdam cumque obcaecati quia consequatur
+          possimus sed saepe! Similique.
+        </p>
+      </HeaderContent>
 
-        <ServiceList>
-          {services.map(({ node: s }, index) => (
-            <ServiceCard key={index} name={s.name} topics={s.topics} />
-          ))}
-        </ServiceList>
-      </Content>
+      <ServicesContent>
+        <div>
+          {services.map(
+            ({ node: s }, index) =>
+              index % 2 === 0 && (
+                <ServiceCard
+                  key={index}
+                  name={s.name}
+                  description={s.description}
+                  image={"hero-rocket.svg"}
+                />
+              )
+          )}
+        </div>
+        <div>
+          {services.map(
+            ({ node: s }, index) =>
+              index % 2 !== 0 && (
+                <ServiceCard
+                  key={index}
+                  name={s.name}
+                  description={s.description}
+                  image={"hero-rocket.svg"}
+                />
+              )
+          )}
+        </div>
+      </ServicesContent>
     </Container>
   )
 }
