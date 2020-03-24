@@ -9,6 +9,7 @@ import {
   HeaderLogo,
   HeaderLinks,
 } from "./styled"
+import CTAButton from "../CTAButton"
 
 const Header = ({ siteTitle }) => (
   <HeaderContainer>
@@ -33,9 +34,7 @@ const Header = ({ siteTitle }) => (
           FAQ
         </Link>
 
-        <button>
-          <Link to="#">Entre em contato</Link>
-        </button>
+        <CTAButton>Entre em contato</CTAButton>
       </HeaderLinks>
     </HeaderContent>
   </HeaderContainer>
