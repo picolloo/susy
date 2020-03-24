@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
-import Contact from "../components/Contact"
+// import Contact from "../components/Contact"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -11,7 +11,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <Services />
-    <Contact />
+    {/* 
+    <Contact /> */}
   </Layout>
 )
 

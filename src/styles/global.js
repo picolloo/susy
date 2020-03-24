@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  
+
   }
   body {
     margin: 0;
@@ -195,7 +197,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-y: scroll;
   }
   * {
-    box-sizing: inherit;
+    box-sizing: border-box;
+    font-family: "Sul Sans Light", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   *:before {
     box-sizing: inherit;
@@ -629,7 +632,6 @@ const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
   }
-
 
   ${typography}
 `

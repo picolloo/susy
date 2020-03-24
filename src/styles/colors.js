@@ -1,8 +1,8 @@
 export default {
-  primary: "#FCAA23",
+  primary: "#EA1D2C",
+  // primary: "#FCAA23",
   primaryLight: "#FEEED3",
   secondary: "#5856D6",
-  gray: "#222A41",
-  lightGray: "#6D7783",
-  black: "#333333",
+  gray: "#3e3e3e",
+  lightGray: "#717171",
 }

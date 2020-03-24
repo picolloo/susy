@@ -2,31 +2,21 @@
   {
     "id": 0,
     "name": "Eventos e agenda",
-    "topics": ["Compra de passagens", "Orçamentos", "Agendamentos", "Hotéis"]
+    "description": "Compra de passagens Orçamentos Agendamentos Hotéis"
   },
   {
     "id": 1,
     "name": "Financeiro",
-    "topics": [
-      "Contas a pagar",
-      "Controle de despesas",
-      "Compras online",
-      "Gestão de milhagens"
-    ]
+    "description": "Contas a pagar Controle de despesas Compras online Gestão de milhagens"
   },
   {
     "id": 2,
     "name": "Comunicação",
-    "topics": [
-      "Apresentações",
-      "Redes sociais",
-      "Gestão de emails",
-      "Atendimento telefônico"
-    ]
+    "description": "Apresentações Redes sociais Gestão de emails Atendimento telefônico"
   },
   {
     "id": 3,
     "name": "Documentação",
-    "topics": ["Arquivamento", "Formatação", "Organização"]
+    "description": "Arquivamento Formatação Organização"
   }
 ]
