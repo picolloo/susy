@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import colors from "../../styles/colors"
+import colors from "../../../styles/colors"
 
 export const Container = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   * {
     font-weight: 400;
-    color: ${colors.lightGray};
+    color: ${colors.white};
   }
 
   @media screen and (min-width: 560px) {

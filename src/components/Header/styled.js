@@ -41,7 +41,7 @@ export const HeaderLinks = styled("div")`
   a {
     font-weight: 400;
     margin-right: 2.5rem;
-    color: ${colors.gray};
+    color: ${colors.darkGray};
 
     &:hover {
       color: ${colors.primary};
