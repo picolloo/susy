@@ -5,7 +5,8 @@ import colors from "../../styles/colors"
 
 export const Container = styled.div`
   background: ${colors.darkGray};
-  padding: 20px 0;
+  padding: 10px;
+  font-size: 14px;
 `
 
 export const Content = styled.div`
@@ -38,7 +39,13 @@ export default function Footer() {
         <span>Todos os direitos reservados &copy;</span>
         <span>
           Made with <span>❤</span> by{" "}
-          <a href="https://github.com/picolloo">Picollo</a>
+          <a
+            href="https://github.com/picolloo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Picollo
+          </a>
         </span>
       </Content>
     </Container>
