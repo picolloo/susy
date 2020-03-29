@@ -2,22 +2,29 @@ import React from "react"
 import styled from "styled-components"
 import { Formik, Form } from "formik"
 
-import color from "../../styles/colors"
+import colors from "../../styles/colors"
 
 export const Container = styled.div`
-  display: flex;
+  padding: 0 20px;
+  margin: 0;
+  background: ${colors.primary};
+
+  /* display: flex;
   flex-direction: column;
   align-items: center;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-  }
+  } */
 `
 
-export const Content = styled.div``
+export const Content = styled.div`
+  max-width: 1400px;
+  width: 100%;
+`
 
 export const StyledForm = styled(Form)`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -27,20 +34,20 @@ export const StyledForm = styled(Form)`
     margin-bottom: 1rem;
 
     label {
-      /* font-weight: 600; */
-      color: ${color.gray};
+      font-weight: 600;
+      color: ${colors.darkGray};
       width: 100%;
     }
   }
 
   > button {
     border: none;
-    background: ${color.secondary};
+    background: ${colors.secondary};
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 126px;
     width: 9rem;
-  }
+  } */
 `
 
 export default function Contact() {
