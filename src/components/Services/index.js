@@ -19,8 +19,6 @@ export default function Services() {
     }
   `)
 
-  console.log(services)
-
   return (
     <Container>
       <Content>

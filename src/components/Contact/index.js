@@ -1,59 +1,37 @@
 import React from "react"
-import styled from "styled-components"
-import { Formik, Form } from "formik"
+import { graphql, useStaticQuery } from "gatsby"
+import { Formik, Field } from "formik"
+import Image from "gatsby-image"
 
-import colors from "../../styles/colors"
-
-export const Container = styled.div`
-  padding: 0 20px;
-  margin: 0;
-  background: ${colors.primary};
-
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  } */
-`
-
-export const Content = styled.div`
-  max-width: 1400px;
-  width: 100%;
-`
-
-export const StyledForm = styled(Form)`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  > div {
-    width: 100%;
-    margin-bottom: 1rem;
-
-    label {
-      font-weight: 600;
-      color: ${colors.darkGray};
-      width: 100%;
-    }
-  }
-
-  > button {
-    border: none;
-    background: ${colors.secondary};
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 126px;
-    width: 9rem;
-  } */
-`
+import {
+  Container,
+  Content,
+  StyledForm,
+  FormGroup,
+  Button,
+  ImageContainer,
+} from "./styles"
 
 export default function Contact() {
+  const { contactImage } = useStaticQuery(graphql`
+    query {
+      contactImage: file(relativePath: { eq: "women-talk.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Container>
       <Content>
+        <ImageContainer>
+          <Image fluid={contactImage.childImageSharp.fluid} />
+        </ImageContainer>
+
         <Formik
           initialValues={{
             name: "",
@@ -68,45 +46,29 @@ export default function Contact() {
         >
           {() => (
             <StyledForm>
-              <div>
-                <label htmlFor="name">
-                  Nome
-                  <input id="name" name="name"></input>
-                </label>
-              </div>
-              <div>
-                <label htmlFor="email">
-                  Email
-                  <input id="email" name="email"></input>
-                </label>
-              </div>
-              <div>
-                <label htmlFor="service">
-                  Serviço
-                  <input id="service" name="service" type="select"></input>
-                </label>
-              </div>
-              <div>
-                <label htmlFor="description">
-                  Descrição
-                  <input
-                    id="description"
-                    name="description"
-                    type="textarea"
-                  ></input>
-                </label>
-              </div>
-              <div>
-                <label htmlFor="deliveyDate">
-                  Data de entrega
-                  <input
-                    id="deliveyDate"
-                    name="deliveyDate"
-                    type="date"
-                  ></input>
-                </label>
-              </div>
-              <button type="submit">Enviar</button>
+              <FormGroup>
+                <label htmlFor="name">Nome</label>
+                <Field name="name" />
+              </FormGroup>
+              <FormGroup>
+                <label htmlFor="email">Email</label>
+                <Field name="email" type="email" />
+              </FormGroup>
+              <FormGroup>
+                <label htmlFor="service">Serviço</label>
+                <Field name="service" as="select">
+                  <option value="0">Documentos</option>
+                </Field>
+              </FormGroup>
+              <FormGroup>
+                <label htmlFor="deliveyDate">Data de entrega</label>
+                <Field name="deliveyDate" type="date" />
+              </FormGroup>
+              <FormGroup>
+                <label htmlFor="description">Descrição</label>
+                <Field name="description" as="textarea" rows={4} />
+              </FormGroup>
+              <Button type="submit">Enviar</Button>
             </StyledForm>
           )}
         </Formik>
