@@ -1,22 +1,65 @@
 [
   {
     "id": 0,
-    "name": "Eventos e agenda",
-    "description": "Compra de passagens Orçamentos Agendamentos Hotéis"
+    "name": "Comunidade universitária",
+    "topics": [
+      "Lattes",
+      "Plataforma Brasil",
+      "Sigpex",
+      "Concurso para titular",
+      "Desenvolvimento de presentações"
+    ]
   },
   {
     "id": 1,
-    "name": "Financeiro",
-    "description": "Contas a pagar Controle de despesas Compras online Gestão de milhagens"
+    "name": "Administrativo",
+    "topics": [
+      "Alimentação de sistemas e planilhas",
+      "Organização de documentos",
+      "Pesquisas em geral",
+      "Confirmação de presença e RVSP",
+      "Gestão de e-mails",
+      "Acompanhamento de entregas",
+      "Solicitação de fretes"
+    ]
   },
   {
     "id": 2,
-    "name": "Comunicação",
-    "description": "Apresentações Redes sociais Gestão de emails Atendimento telefônico"
+    "name": "Financeiro",
+    "topics": [
+      "Criação de processos e planilhas (boletos, cobranças, acompanhamento, etc)",
+      "Emissão de boletos e Notas fiscais"
+    ]
   },
   {
     "id": 3,
-    "name": "Documentação",
-    "description": "Arquivamento Formatação Organização"
+    "name": "Comerciais e relacionamentos",
+    "topics": [
+      "Prospecção, follow up de clientes e pós-venda",
+      "Gestão de clientes e fornecedores",
+      "Cadastro de clientes",
+      "Mala direta",
+      "Planejamento de eventos",
+      "Agendamento de reuniões, consultas, compromissos, compras..."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Assistência pessoal",
+    "topics": [
+      "Assistência pessoal para organização e execução de tarefas diversas como agendamentos, lembrete de compromissos e datas especiais",
+      "Organização de contas pessoais (a pagar e a receber)",
+      "Atualização e cancelamento de serviços como telefonia e internet, TV a cabo, companhias aéreas, seguros",
+      "Orçamento, reserva e compra de passagens, check in, hotéis, restaurantes e locação de carro"
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "Marketing digital",
+    "topics": [
+      "Responder comentários de redes sociais",
+      "Agendar publicações no Facebook e Instagram"
+    ]
   }
 ]

@@ -13,7 +13,7 @@ export default function Services() {
         nodes {
           id
           name
-          description
+          topics
         }
       }
     }
@@ -39,7 +39,7 @@ export default function Services() {
                   <ServiceCard
                     key={index}
                     name={service.name}
-                    description={service.description}
+                    topics={service.topics}
                     image={"hero-rocket.svg"}
                   />
                 )
@@ -52,7 +52,7 @@ export default function Services() {
                   <ServiceCard
                     key={index}
                     name={service.name}
-                    description={service.description}
+                    topics={service.topics}
                     image={"hero-rocket.svg"}
                   />
                 )

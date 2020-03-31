@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Container, Image, Title, Description } from "./styles"
+import { Container, Image, Title, Topics } from "./styles"
 
-function ServiceCard({ name, description, image }) {
+function ServiceCard({ name, topics, image }) {
   return (
     <Container>
       <Image>
@@ -19,16 +19,18 @@ function ServiceCard({ name, description, image }) {
         <Title>{name}</Title>
       </div>
 
-      <div>
-        <Description>{description}</Description>
-      </div>
+      <Topics>
+        {topics.map(topic => (
+          <li>{topic}</li>
+        ))}
+      </Topics>
     </Container>
   )
 }
 
 ServiceCard.propTypes = {
   name: PropTypes.string.isRequired,
-  topics: PropTypes.arrayOf(PropTypes.string),
+  topics: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default ServiceCard

@@ -28,9 +28,15 @@ export const Title = styled.span`
   font-size: 22px;
   margin-top: 18px;
   display: inline-block;
+  border-bottom: 1px solid ${colors.white};
 `
 
-export const Description = styled.p`
-  font-size: 16px;
-  margin-top: 12px;
+export const Topics = styled.ul`
+  margin-top: 15px;
+  list-style: none;
+  margin-left: 10px;
+
+  > li {
+    font-size: 16px;
+  }
 `
