@@ -29,7 +29,8 @@ export default function Contact() {
     <Container>
       <Content>
         <ImageContainer>
-          <Image fluid={contactImage.childImageSharp.fluid} />
+          <Image
+            fluid={contactImage.childImageSharp.fluid} />
         </ImageContainer>
 
         <Formik
@@ -59,10 +60,6 @@ export default function Contact() {
                 <Field name="service" as="select">
                   <option value="0">Documentos</option>
                 </Field>
-              </FormGroup>
-              <FormGroup>
-                <label htmlFor="deliveyDate">Data de entrega</label>
-                <Field name="deliveyDate" type="date" />
               </FormGroup>
               <FormGroup>
                 <label htmlFor="description">Descrição</label>

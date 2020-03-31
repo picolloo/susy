@@ -92,20 +92,32 @@ export const Button = styled.button`
   border-radius: 4px;
   padding: 0.3rem 0.8rem;
   outline: none;
+  border: none;
   max-width: 105px;
   width: 100%;
   text-align: center;
   letter-spacing: 1px;
   cursor: pointer;
   font-size: 16px;
-
+  box-sizing: border-box;
   color: ${colors.primary};
+  border: 1px solid ${colors.white};
+  font-weight: 600;
+
 
   &:hover {
-    border: 1px solid ${colors.primary};
+    border: 1px solid ${colors.white};
+    background: none;
+    color:${colors.white};
   }
 `
 
 export const ImageContainer = styled.div`
   flex: 1;
+
+  img {
+    max-height: 400px;
+    height: 100%;
+    border-radius: 10px;
+  }
 `
