@@ -1,6 +1,13 @@
 import styled from "styled-components"
+import Navigation from "react-sticky-nav"
 
 import colors from "../../styles/colors"
+
+export const StyledNavigation = styled(Navigation)`
+  position: -webkit-stick;
+  z-index: 10;
+  background: #fff;
+`
 
 export const HeaderContainer = styled("header")`
   max-height: 100px;
