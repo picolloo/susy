@@ -8,7 +8,11 @@
       "Sigpex",
       "Concurso para titular",
       "Desenvolvimento de presentações"
-    ]
+    ],
+    "image": {
+      "src": "university.jpg",
+      "referral": "Photo by Jordan Encarnacao on Unsplash"
+    }
   },
   {
     "id": 1,
@@ -21,7 +25,11 @@
       "Gestão de e-mails",
       "Acompanhamento de entregas",
       "Solicitação de fretes"
-    ]
+    ],
+    "image": {
+      "src": "manage.jpg",
+      "referral": "Photo by Andrew Neel on Unsplash"
+    }
   },
   {
     "id": 2,
@@ -29,18 +37,26 @@
     "topics": [
       "Criação de processos e planilhas (boletos, cobranças e acompanhamento)",
       "Emissão de boletos e notas fiscais"
-    ]
+    ],
+    "image": {
+      "src": "finance.jpg",
+      "referral": "Photo by William Iven on Unsplash"
+    }
   },
   {
     "id": 3,
-    "name": "Comerciais e relacionamentos",
+    "name": "Comercial e relacionamentos",
     "topics": [
       "Prospecção, follow up de clientes e pós-venda",
       "Gestão de clientes e fornecedores",
       "Mala direta",
       "Planejamento de eventos",
       "Agendamento de reuniões, consultas e compromissos"
-    ]
+    ],
+    "image": {
+      "src": "business.jpg",
+      "referral": "Photo by Samson on Unsplash"
+    }
   },
   {
     "id": 4,
@@ -51,7 +67,11 @@
       "Organização de contas pessoais",
       "Atualização e cancelamento de serviços (telefonia, internet, TV a cabo, companhias aéreas e seguros)",
       "Orçamento, reserva compra de passagens e hotéis, check in, restaurantes e locação de carro"
-    ]
+    ],
+    "image": {
+      "src": "helping.jpg",
+      "referral": "Photo by Toa Heftiba on Unsplash"
+    }
   },
 
   {
@@ -60,6 +80,10 @@
     "topics": [
       "Gerenciamento de redes sociais",
       "Agendamento de publicações no Facebook e Instagram"
-    ]
+    ],
+    "image": {
+      "src": "marketing.jpg",
+      "referral": "Photo by John Schnobrich on Unsplash"
+    }
   }
 ]
