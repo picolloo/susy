@@ -1,17 +1,17 @@
 [
   {
     "index": 1,
-    "description": "Comodidade",
+    "description": "Terceirização de tarefas administrativas.",
     "image": "comodidade"
   },
   {
     "index": 2,
-    "description": "Economia",
+    "description": "Mais tempo para focar no cliente ou no seu produto.",
     "image": "comodidade"
   },
   {
     "index": 3,
-    "description": "Tempo",
+    "description": "Resultados com agilidade e eficácia.",
     "image": "comodidade"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "index": 5,
-    "description": "Comodidade",
+    "description": "Profissionalismo com mais de 15 anos de experiência.",
     "image": "comodidade"
   }
 ]
