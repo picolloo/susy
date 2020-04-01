@@ -29,9 +29,6 @@ export const Content = styled.div`
     margin-bottom: 1rem;
   }
 `
-
-// import { Container } from './styles';
-
 export default function Interest() {
   return (
     <Container>
@@ -39,7 +36,7 @@ export default function Interest() {
         <h4>Gostou e quer saber mais?</h4>
         <h4>Nós entramos em contato com você</h4>
 
-        <CTAButton>Quero saber mais</CTAButton>
+        <CTAButton linkTo="contact">Quero saber mais</CTAButton>
       </Content>
     </Container>
   )

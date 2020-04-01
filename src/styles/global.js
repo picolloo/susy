@@ -7,8 +7,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  
-
+  scroll-behavior: smooth;
   }
   body {
     margin: 0;

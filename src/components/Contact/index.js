@@ -26,11 +26,10 @@ export default function Contact() {
   `)
 
   return (
-    <Container>
+    <Container id="contact">
       <Content>
         <ImageContainer>
-          <Image
-            fluid={contactImage.childImageSharp.fluid} />
+          <Image fluid={contactImage.childImageSharp.fluid} />
         </ImageContainer>
 
         <Formik

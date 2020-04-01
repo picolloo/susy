@@ -22,7 +22,7 @@ export default function Hero() {
     <Container>
       <HeroCTA>
         <h1>Tenha sua vida na palma da mão</h1>
-        <CTAButton>Faça um orçamento</CTAButton>
+        <CTAButton linkTo="contact">Faça um orçamento</CTAButton>
       </HeroCTA>
 
       <ImageContainer>

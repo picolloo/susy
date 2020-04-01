@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import colors from "../../styles/colors"
 
-const Button = styled.a`
+const Link = styled.a`
   background: ${colors.primary};
   border: 1px solid ${colors.primary};
   border-radius: 4px;
@@ -28,6 +28,10 @@ const Button = styled.a`
   }
 `
 
-export default function CTAButton({ children }) {
-  return <Button style={{ color: "#fff", fontWeight: 600 }}>{children}</Button>
+export default function CTAButton({ children, linkTo }) {
+  return (
+    <Link href={`#${linkTo}`} style={{ color: "#fff", fontWeight: 600 }}>
+      {children}
+    </Link>
+  )
 }

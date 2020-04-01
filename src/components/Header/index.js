@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
             FAQ
           </Link>
 
-          <CTAButton>Entre em contato</CTAButton>
+          <CTAButton linkTo="contact">Entre em contato</CTAButton>
         </HeaderLinks>
       </HeaderContent>
     </HeaderContainer>
