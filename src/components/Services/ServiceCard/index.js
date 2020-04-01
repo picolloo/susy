@@ -1,9 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 import { Container, Image, Title, Topics } from "./styles"
 
-function ServiceCard({ name, topics, image }) {
+function ServiceCard({ name, topics, imageSrc, imageReferral }) 
+
+  // const { file } = useStaticQuery(graphql`
+  //   query {
+  //     images: allFile(fikter: { extension: /jpg/" }) {
+        
+  //     }
+  //   }
+  // `)
+
   return (
     <Container>
       <Image>

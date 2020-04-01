@@ -14,6 +14,10 @@ export default function Services() {
           id
           name
           topics
+          image {
+            src
+            referral
+          }
         }
       }
     }
@@ -40,7 +44,8 @@ export default function Services() {
                     key={index}
                     name={service.name}
                     topics={service.topics}
-                    image={"hero-rocket.svg"}
+                    imageSrc={service.image.src}
+                    imageReferral={service.image.referral}
                   />
                 )
             )}
@@ -53,7 +58,8 @@ export default function Services() {
                     key={index}
                     name={service.name}
                     topics={service.topics}
-                    image={"hero-rocket.svg"}
+                    imageSrc={service.image.src}
+                    imageReferral={service.image.referral}
                   />
                 )
             )}
