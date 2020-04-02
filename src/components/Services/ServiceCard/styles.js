@@ -18,6 +18,9 @@ export const Container = styled.div`
 `
 
 export const Image = styled.div`
+  border-radius: 10px;
+  overflow: hidden;
+
   > img {
     width: 100%;
     margin-bottom: 0;
@@ -27,6 +30,7 @@ export const Image = styled.div`
 export const Title = styled.span`
   font-size: 22px;
   margin-top: 18px;
+  font-weight: 600;
   display: inline-block;
   border-bottom: 1px solid ${colors.white};
 `

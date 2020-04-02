@@ -5,34 +5,40 @@ import Img from "gatsby-image"
 
 import { Container, Image, Title, Topics } from "./styles"
 
-function ServiceCard({ name, topics, imageSrc, imageReferral }) 
+const renderImage = file => <Img fluid={file.node.childImageSharp.fluid} />
 
-  // const { file } = useStaticQuery(graphql`
-  //   query {
-  //     images: allFile(fikter: { extension: /jpg/" }) {
-        
-  //     }
-  //   }
-  // `)
+function ServiceCard({ name, topics, imageSrc, imageReferral }) {
+  const { images } = useStaticQuery(graphql`
+    query {
+      images: allFile(filter: { extension: { regex: "/jpg/" } }) {
+        edges {
+          node {
+            extension
+            relativePath
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <Container>
       <Image>
-        <img
-          src={
-            "https://empresas.ifood.com.br/static/media/benefits-3.74859c10.png"
-          }
-          alt="service icon"
-        />
+        {renderImage(
+          images.edges.find(img => img.node.relativePath === imageSrc)
+        )}
       </Image>
 
-      <div>
-        <Title>{name}</Title>
-      </div>
+      <Title>{name}</Title>
 
       <Topics>
-        {topics.map(topic => (
-          <li>{topic}</li>
+        {topics.map((topic, index) => (
+          <li key={index}>{topic}</li>
         ))}
       </Topics>
     </Container>

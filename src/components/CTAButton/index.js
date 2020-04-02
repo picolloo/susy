@@ -13,7 +13,7 @@ const Link = styled.a`
   color: #fff;
   text-decoration: none;
   text-align: center;
-
+  font-weight: 600;
   letter-spacing: 1px;
   font-size: 16px;
 

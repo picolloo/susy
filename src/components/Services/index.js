@@ -41,7 +41,7 @@ export default function Services() {
               (service, index) =>
                 index % 2 === 0 && (
                   <ServiceCard
-                    key={index}
+                    key={service.id}
                     name={service.name}
                     topics={service.topics}
                     imageSrc={service.image.src}
@@ -55,7 +55,7 @@ export default function Services() {
               (service, index) =>
                 index % 2 !== 0 && (
                   <ServiceCard
-                    key={index}
+                    key={service.id}
                     name={service.name}
                     topics={service.topics}
                     imageSrc={service.image.src}
