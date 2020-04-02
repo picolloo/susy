@@ -13,13 +13,22 @@ import {
 } from "./styles"
 
 export default function Contact() {
-  const { contactImage } = useStaticQuery(graphql`
+  const {
+    contactImage,
+    allServicesJson: { nodes: services },
+  } = useStaticQuery(graphql`
     query {
       contactImage: file(relativePath: { eq: "women-talk.jpeg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
+        }
+      }
+      allServicesJson {
+        nodes {
+          id
+          name
         }
       }
     }
@@ -36,12 +45,11 @@ export default function Contact() {
           initialValues={{
             name: "",
             email: "",
-            service: null,
+            service: "",
             description: "",
-            deliveryDate: null,
           }}
-          onSubmit={data => {
-            console.log(data)
+          onSubmit={e => {
+            console.log(e)
           }}
         >
           {() => (
@@ -57,7 +65,12 @@ export default function Contact() {
               <FormGroup>
                 <label htmlFor="service">Serviço</label>
                 <Field name="service" as="select">
-                  <option value="0">Documentos</option>
+                  <option value="" label="Selecione um serviço" />
+                  {services.map(service => (
+                    <option key={service.id} value={service.id}>
+                      {service.name}
+                    </option>
+                  ))}
                 </Field>
               </FormGroup>
               <FormGroup>

@@ -104,11 +104,10 @@ export const Button = styled.button`
   border: 1px solid ${colors.white};
   font-weight: 600;
 
-
   &:hover {
     border: 1px solid ${colors.white};
     background: none;
-    color:${colors.white};
+    color: ${colors.white};
   }
 `
 
