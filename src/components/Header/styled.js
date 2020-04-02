@@ -18,7 +18,7 @@ export const HeaderContent = styled("div")`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 14px;
 `
 
 export const HeaderLogoContainer = styled("div")`
@@ -47,8 +47,12 @@ export const HeaderLinks = styled("div")`
 
   a {
     font-weight: 400;
-    margin-right: 2.5rem;
+
     color: ${colors.darkGray};
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
 
     &:hover {
       color: ${colors.primary};
