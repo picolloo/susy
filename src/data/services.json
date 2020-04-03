@@ -77,10 +77,7 @@
   {
     "id": 5,
     "name": "Marketing digital",
-    "topics": [
-      "Gerenciamento de redes sociais",
-      "Agendamento de publicações no Facebook e Instagram"
-    ],
+    "topics": ["Agendamento de publicações no Facebook e Instagram"],
     "image": {
       "src": "marketing.jpg",
       "referral": "Photo by John Schnobrich on Unsplash"

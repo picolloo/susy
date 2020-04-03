@@ -36,34 +36,15 @@ export default function Services() {
         </HeaderContent>
 
         <ServicesContent>
-          <div>
-            {services.map(
-              (service, index) =>
-                index % 2 === 0 && (
-                  <ServiceCard
-                    key={service.id}
-                    name={service.name}
-                    topics={service.topics}
-                    imageSrc={service.image.src}
-                    imageReferral={service.image.referral}
-                  />
-                )
-            )}
-          </div>
-          <div>
-            {services.map(
-              (service, index) =>
-                index % 2 !== 0 && (
-                  <ServiceCard
-                    key={service.id}
-                    name={service.name}
-                    topics={service.topics}
-                    imageSrc={service.image.src}
-                    imageReferral={service.image.referral}
-                  />
-                )
-            )}
-          </div>
+          {services.map(service => (
+            <ServiceCard
+              key={service.id}
+              name={service.name}
+              topics={service.topics}
+              imageSrc={service.image.src}
+              imageReferral={service.image.referral}
+            />
+          ))}
         </ServicesContent>
       </Content>
     </Container>
