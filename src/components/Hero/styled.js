@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import colors from "../../styles/colors"
 
@@ -8,44 +9,44 @@ export const Container = styled.div`
   max-width: 1400px;
   display: flex;
   flex-direction: column-reverse;
-  padding: 40px 20px 0;
+  padding: 30px 20px 0;
+  margin-bottom: 100px;
 
   @media screen and (min-width: 960px) {
-    padding: 115px 0 0;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 100px auto;
   }
 `
 
 export const HeroCTA = styled.section`
   display: flex;
   flex-direction: column;
+  margin-top: 0.5rem;
 
   > h1 {
-    font-size: 30px;
+    font-size: 7vw;
     font-weight: 400;
     line-height: 42px;
     color: ${colors.darkGray};
   }
 
-  @media screen and (min-width: 960px) {
-    margin: 70px 25px 0 0;
-    padding: 0;
-    max-width: 550px;
+  @media screen and (min-width: 370px) {
+    > h1 {
+      font-size: 6vw;
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    margin-top: 0;
 
     > h1 {
-      font-size: 42px;
-      line-height: 56px;
+      font-size: 40px;
     }
   }
 `
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled(Img)`
   width: 100%;
-
-  img {
-    max-height: 470px;
-    height: 100%;
-    border-radius: 10px;
-  }
+  border-radius: 5px;
+  max-height: 470px;
 `

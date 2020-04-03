@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 import { Container, HeroCTA, ImageContainer } from "./styled"
 import CTAButton from "../CTAButton"
@@ -10,7 +9,7 @@ export default function Hero() {
     query {
       file(relativePath: { eq: "women.jpg" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 92) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -25,9 +24,10 @@ export default function Hero() {
         <CTAButton linkTo="contact">Faça um orçamento</CTAButton>
       </HeroCTA>
 
-      <ImageContainer>
-        <Img fluid={file.childImageSharp.fluid} alt="Women in a couch." />
-      </ImageContainer>
+      <ImageContainer
+        fluid={file.childImageSharp.fluid}
+        alt="Women in a couch."
+      />
     </Container>
   )
 }
