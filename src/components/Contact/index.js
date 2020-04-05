@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Formik, Field } from "formik"
-import Image from "gatsby-image"
 
 import {
   Container,
@@ -10,6 +9,7 @@ import {
   FormGroup,
   Button,
   ImageContainer,
+  ButtonContainer,
 } from "./styles"
 
 export default function Contact() {
@@ -37,9 +37,10 @@ export default function Contact() {
   return (
     <Container id="contact">
       <Content>
-        <ImageContainer>
-          <Image fluid={contactImage.childImageSharp.fluid} />
-        </ImageContainer>
+        <ImageContainer
+          fluid={contactImage.childImageSharp.fluid}
+          alt="Two women talking to each other."
+        />
 
         <Formik
           initialValues={{
@@ -77,7 +78,9 @@ export default function Contact() {
                 <label htmlFor="description">Descrição</label>
                 <Field name="description" as="textarea" rows={4} />
               </FormGroup>
-              <Button type="submit">Enviar</Button>
+              <ButtonContainer>
+                <Button type="submit">Enviar</Button>
+              </ButtonContainer>
             </StyledForm>
           )}
         </Formik>

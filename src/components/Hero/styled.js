@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   @media screen and (min-width: 960px) {
     flex-direction: row;
-    margin: 200px auto;
+    margin: 100px auto 200px;
   }
 `
 
@@ -41,6 +41,7 @@ export const HeroCTA = styled.section`
 
     > h1 {
       font-size: 40px;
+      line-height: 56px;
     }
   }
 `

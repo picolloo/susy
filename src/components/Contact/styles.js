@@ -1,42 +1,64 @@
 import styled from "styled-components"
 import { Form } from "formik"
+import Image from "gatsby-image"
 
 import colors from "../../styles/colors"
 
 export const Container = styled.div`
   padding: 100px 0 80px;
-  background: ${colors.primary};
+  background: ${colors.secondary};
 `
 
 export const Content = styled.div`
-  max-width: 1400px;
-  width: 100%;
   margin: auto;
+  width: 90%;
+  max-width: 1400px;
   color: ${colors.white};
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 960px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `
 
 export const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1;
-  height: 100%;
+  align-items: flex-start;
   margin-bottom: 0;
+  height: 100%;
 
-  > * + * {
-    margin-top: 1rem;
+  @media screen and (min-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
   }
 `
 
 export const FormGroup = styled.div`
   display: flex;
+  flex-direction: column;
+  margin: 1rem auto 0 0;
+
+  @media screen and (min-width: 960px) {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto 1rem 1rem;
+
+    > label {
+      margin-bottom: 0;
+    }
+  }
 
   > label {
-    width: 130px;
+    width: 90px;
     display: inline-block;
+    margin-bottom: 0.3rem;
   }
 
   > input,
@@ -88,6 +110,17 @@ export const FormGroup = styled.div`
   }
 `
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  width: 100%;
+
+  @media screen and (min-width: 960px) {
+    margin-top: 0;
+  }
+`
+
 export const Button = styled.button`
   border-radius: 4px;
   padding: 0.3rem 0.8rem;
@@ -103,6 +136,7 @@ export const Button = styled.button`
   color: ${colors.primary};
   border: 1px solid ${colors.white};
   font-weight: 600;
+  background: white;
 
   &:hover {
     border: 1px solid ${colors.white};
@@ -111,12 +145,10 @@ export const Button = styled.button`
   }
 `
 
-export const ImageContainer = styled.div`
-  flex: 1;
-
-  img {
-    max-height: 400px;
-    height: 100%;
-    border-radius: 10px;
-  }
+export const ImageContainer = styled(Image)`
+  width: 100%;
+  max-height: 370px;
+  max-width: 600px;
+  border-radius: 6px;
+  margin-bottom: 0;
 `

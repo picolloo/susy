@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../Header"
 import GlobalStyle from "../../styles/global"
-import { LayoutContainer, LayoutContent } from "./styled"
+import { LayoutContent } from "./styled"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <LayoutContainer>
+    <>
       <GlobalStyle />
 
       <LayoutContent>
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer></footer>
       </LayoutContent>
-    </LayoutContainer>
+    </>
   )
 }
 
