@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import BenefitCard from "./BenefitCard"
-import { Container, Content, CardList } from "./styles"
+import { Container, Content, CardList, SliderScroll } from "./styles"
 
 export default function Benefits() {
   const {
@@ -25,16 +25,20 @@ export default function Benefits() {
         <span>Secretariado remoto</span>
         <h3>Quais são os benefícios?</h3>
 
-        <CardList>
-          {benefits.map((benefit, index) => (
-            <BenefitCard
-              key={index}
-              index={benefit.index}
-              description={benefit.description}
-              image={benefit.image}
-            />
-          ))}
-        </CardList>
+        <SliderScroll>
+          <CardList>
+            <div role="list">
+              {benefits.map((benefit, index) => (
+                <BenefitCard
+                  key={index}
+                  index={benefit.index}
+                  description={benefit.description}
+                  image={benefit.image}
+                />
+              ))}
+            </div>
+          </CardList>
+        </SliderScroll>
       </Content>
     </Container>
   )

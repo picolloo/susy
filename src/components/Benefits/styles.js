@@ -5,32 +5,52 @@ import colors from "../../styles/colors"
 export const Container = styled.div`
   max-width: 1400px;
   width: 100%;
-  margin: 3rem auto;
+  margin: 2rem auto;
 `
 
 export const Content = styled.div`
   text-align: center;
-  padding: 100px 0;
+  padding: 100px 1rem;
 
   > span {
     color: ${colors.gray};
   }
 `
 
-export const CardList = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 4rem;
+export const SliderScroll = styled.div`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+`
 
-  @media screen and (min-width: 800px) {
-    flex-direction: row;
+export const CardList = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  box-sizing: content-box;
+
+  > div {
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    display: inline-flex;
+
+    > * + * {
+      margin-left: 1rem;
+    }
+  }
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  /* @media screen and (min-width: 800px) {
+    
     align-items: flex-start;
 
     > * + * {
       margin-left: 2rem;
     }
-  }
+  } */
 `
