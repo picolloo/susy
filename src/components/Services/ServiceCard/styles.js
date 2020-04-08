@@ -17,7 +17,7 @@ export const Container = styled.div`
   }
 `
 
-export const Image = styled.div`
+export const ImageContainer = styled.div`
   border-radius: 10px;
   max-height: 267px;
   overflow: hidden;

@@ -2,26 +2,41 @@
   {
     "index": 1,
     "description": "Terceirização de tarefas administrativas.",
-    "image": "comodidade"
+    "image": {
+      "src": "clock.jpg",
+      "referral": "Photo by Malvestida Magazine on Unsplash"
+    }
   },
   {
     "index": 2,
     "description": "Mais tempo para focar no cliente ou no seu produto.",
-    "image": "comodidade"
+    "image": {
+      "src": "relaxing.jpg",
+      "referral": "Photo by Dillon Shook on Unsplash"
+    }
   },
   {
     "index": 3,
     "description": "Resultados com agilidade e eficácia.",
-    "image": "comodidade"
+    "image": {
+      "src": "target.jpg",
+      "referral": "Photo by Ameer Basheer on Unsplash"
+    }
   },
   {
     "index": 4,
     "description": "Garantia de entrega com ótima qualidade.",
-    "image": "comodidade"
+    "image": {
+      "src": "laughing.jpg",
+      "referral": "Photo by bruce mars on Unsplash"
+    }
   },
   {
     "index": 5,
     "description": "Profissionalismo com mais de 15 anos de experiência.",
-    "image": "comodidade"
+    "image": {
+      "src": "professionalism.jpg",
+      "referral": "Photo by Icons8 Team on Unsplash"
+    }
   }
 ]

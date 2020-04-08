@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import { Container, Image, Title, Topics } from "./styles"
+import { Container, ImageContainer, Title, Topics } from "./styles"
 
 const renderImage = file => <Img fluid={file.node.childImageSharp.fluid} />
 
@@ -28,11 +28,11 @@ function ServiceCard({ name, topics, imageSrc, imageReferral }) {
 
   return (
     <Container>
-      <Image>
+      <ImageContainer>
         {renderImage(
           images.edges.find(img => img.node.relativePath === imageSrc)
         )}
-      </Image>
+      </ImageContainer>
 
       <Title>{name}</Title>
 

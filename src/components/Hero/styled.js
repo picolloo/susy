@@ -22,12 +22,20 @@ export const HeroCTA = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 0.5rem;
+  flex-basis: 45%;
 
   > h1 {
     font-size: 7vw;
     font-weight: 400;
     line-height: 42px;
     color: ${colors.darkGray};
+    margin-bottom: 0.7rem;
+  }
+
+  > span {
+    margin-bottom: 2rem;
+    color: ${colors.gray};
+    font-size: 20px;
   }
 
   @media screen and (min-width: 370px) {
@@ -38,6 +46,7 @@ export const HeroCTA = styled.section`
 
   @media screen and (min-width: 760px) {
     margin-top: 0;
+    justify-content: center;
 
     > h1 {
       font-size: 40px;

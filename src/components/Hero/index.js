@@ -20,7 +20,8 @@ export default function Hero() {
   return (
     <Container>
       <HeroCTA>
-        <h1>Tenha sua vida na palma da mão</h1>
+        <h1>Sem mais stress</h1>
+        <span>Nós tratamos de toda a burocracia para você.</span>
         <CTAButton linkTo="contact">Faça um orçamento</CTAButton>
       </HeroCTA>
 
