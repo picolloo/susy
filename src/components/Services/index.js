@@ -28,11 +28,6 @@ export default function Services() {
       <Content>
         <HeaderContent>
           <h2>Conheça nossos serviços</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            molestiae blanditiis quibusdam cumque obcaecati quia consequatur
-            possimus sed saepe! Similique.
-          </p>
         </HeaderContent>
 
         <ServicesContent>

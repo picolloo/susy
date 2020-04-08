@@ -13,7 +13,10 @@ export default function Benefits() {
         nodes {
           index
           description
-          image
+          image {
+            src
+            referral
+          }
         }
       }
     }
@@ -33,7 +36,8 @@ export default function Benefits() {
                   key={index}
                   index={benefit.index}
                   description={benefit.description}
-                  image={benefit.image}
+                  imageSrc={benefit.image.src}
+                  imageReferral={benefit.image.referral}
                 />
               ))}
             </div>

@@ -22,7 +22,7 @@ export const HeaderContent = styled.div`
   max-width: 450px;
   width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   * {
     color: ${colors.white};
