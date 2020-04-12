@@ -18,6 +18,7 @@ export const Content = styled.div`
 
   span {
     color: ${colors.white};
+    display: inline-block;
 
     > span {
       color: ${colors.primary};
