@@ -14,7 +14,7 @@ export const Content = styled.div`
   width: 100%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
   span {
     color: ${colors.white};
@@ -27,6 +27,11 @@ export const Content = styled.div`
   a {
     text-decoration: none;
     color: ${colors.primary};
+  }
+
+  @media screen and (min-width: 335px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `
 

@@ -17,8 +17,8 @@ export const HeaderContainer = styled("header")`
 export const HeaderContent = styled("div")`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 14px;
+  justify-content: space-between;
 `
 
 export const HeaderLogoContainer = styled("div")`
@@ -34,6 +34,30 @@ export const HeaderLogo = styled("h3")`
   }
 `
 
+export const SocialContent = styled("div")`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  > * {
+    color: ${colors.primary};
+    cursor: pointer;
+
+    &:hover {
+      color: ${colors.secondary};
+    }
+
+    & + * {
+      margin-left: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1830px) {
+    justify-content: center;
+  }
+`
+
 export const HeaderLinks = styled("div")`
   flex: 2;
   display: flex;
@@ -41,8 +65,12 @@ export const HeaderLinks = styled("div")`
   align-items: center;
   font-size: 16px;
 
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 1230px) {
     display: none;
+  }
+
+  @media screen and (min-width: 1830px) {
+    flex: 1;
   }
 
   a {

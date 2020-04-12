@@ -41,16 +41,4 @@ export const CardList = styled.div`
       margin-left: 1rem;
     }
   }
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-
-  /* @media screen and (min-width: 800px) {
-    
-    align-items: flex-start;
-
-    > * + * {
-      margin-left: 2rem;
-    }
-  } */
 `

@@ -23,7 +23,7 @@ export default function Benefits() {
   `)
 
   return (
-    <Container>
+    <Container id="benefits">
       <Content>
         <span>Secretariado remoto</span>
         <h3>Quais são os benefícios?</h3>
