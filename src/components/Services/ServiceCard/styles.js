@@ -5,10 +5,14 @@ import colors from "../../../styles/colors"
 export const Container = styled.div`
   width: 100%;
   margin-bottom: 30px;
+  border-radius: 10px;
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, #f6f8f9 0%, #f6f8f9 100%);
 
   * {
     font-weight: 400;
-    color: ${colors.white};
+    color: ${colors.darkGray};
   }
 
   @media screen and (min-width: 560px) {
@@ -18,7 +22,6 @@ export const Container = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  border-radius: 10px;
   max-height: 267px;
   overflow: hidden;
 
@@ -28,17 +31,16 @@ export const ImageContainer = styled.div`
 `
 
 export const Title = styled.span`
+  text-align: center;
   font-size: 22px;
-  margin-top: 18px;
+  display: block;
+  margin: 18px auto;
   font-weight: 600;
-  display: inline-block;
-  border-bottom: 1px solid ${colors.white};
 `
 
 export const Topics = styled.ul`
-  margin-top: 15px;
   list-style: none;
-  margin-left: 10px;
+  margin: 0 1.5rem;
 
   > li {
     font-size: 16px;

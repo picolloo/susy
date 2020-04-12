@@ -6,11 +6,15 @@ import colors from "../../styles/colors"
 
 export const Container = styled.div`
   max-width: 1400px;
-  margin: 80px auto 200px;
+  margin: 200px auto 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  @media screen and (min-width: 960px) {
+    margin: 250px auto 150px;
+  }
 `
 
 export const Content = styled.div`
