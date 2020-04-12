@@ -1,10 +1,11 @@
 import styled from "styled-components"
-import Navigation from "react-sticky-nav"
 
 import colors from "../../styles/colors"
 
-export const StyledNavigation = styled(Navigation)`
-  position: -webkit-stick;
+export const StyledNavigation = styled.nav`
+  left: 0;
+  top: 0;
+  position: sticky;
   z-index: 10;
   background: #fff;
 `

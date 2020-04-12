@@ -19,12 +19,12 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-json": "^2.2.26",
     "gatsby-transformer-sharp": "^2.3.13",
+    "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
-    "react-sticky-nav": "^4.0.3",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
@@ -34,6 +34,7 @@
     "gatsby"
   ],
   "license": "MIT",
+  "homepage": "https://picolloo.github.io/susy",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -41,7 +42,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy:github": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
