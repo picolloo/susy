@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Formik, Field } from "formik"
 
+import useEmail from "../../hooks/useEmail"
 import {
   Container,
   Content,
@@ -13,6 +14,8 @@ import {
 } from "./styles"
 
 export default function Contact() {
+  const { sendEmail } = useEmail()
+
   const {
     contactImage,
     allServicesJson: { nodes: services },
@@ -49,11 +52,17 @@ export default function Contact() {
             service: "",
             description: "",
           }}
-          onSubmit={e => {
-            console.log(e)
+          onSubmit={async (payload, { resetForm, setSubmitting }) => {
+            try {
+              await sendEmail(payload)
+              resetForm({})
+            } catch (error) {
+              console.error(error)
+              setSubmitting(false)
+            }
           }}
         >
-          {() => (
+          {({ isSubmitting }) => (
             <StyledForm>
               <FormGroup>
                 <label htmlFor="name">Nome</label>
@@ -68,7 +77,7 @@ export default function Contact() {
                 <Field name="service" as="select">
                   <option value="" label="Selecione um serviço" />
                   {services.map(service => (
-                    <option key={service.id} value={service.id}>
+                    <option key={service.id} value={service.name}>
                       {service.name}
                     </option>
                   ))}
@@ -79,7 +88,9 @@ export default function Contact() {
                 <Field name="description" as="textarea" rows={4} />
               </FormGroup>
               <ButtonContainer>
-                <Button type="submit">Enviar</Button>
+                <Button type="submit" disabled={isSubmitting}>
+                  Enviar
+                </Button>
               </ButtonContainer>
             </StyledForm>
           )}
