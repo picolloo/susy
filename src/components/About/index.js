@@ -20,7 +20,7 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  flex: 0 0 50%;
+  flex: 0 0 60%;
 
   > h2 {
     text-align: center;
@@ -34,7 +34,7 @@ export const Content = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   display: flex;
   justify-content: center;
   align-items: center;

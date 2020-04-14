@@ -8,7 +8,7 @@ export const Container = styled.div`
   border-radius: 10px;
   padding-bottom: 0.5rem;
   overflow: hidden;
-  background-image: linear-gradient(180deg, #f6f8f9 0%, #f6f8f9 100%);
+  background: white;
 
   * {
     font-weight: 400;
