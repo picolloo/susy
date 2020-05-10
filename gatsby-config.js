@@ -3,11 +3,17 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Susa Remota`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: "Serviço de secretariado remoto profissional.",
+    author: `@picolloo`,
   },
   pathPrefix: "/susy",
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-166006606-1",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,8 +53,5 @@ module.exports = {
         },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
