@@ -6,13 +6,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 250px;
+  color: white;
 
   div:first-child {
     width: 100%;
     height: 150px;
     overflow: hidden;
     border-radius: 4px;
-    background: ${colors.lightGray};
   }
 `
 
@@ -25,7 +25,6 @@ export const Content = styled.div`
 
   > span {
     font-size: 32px;
-    color: ${colors.lightGray};
     line-height: 80%;
     font-weight: 600;
 
@@ -39,7 +38,6 @@ export const Content = styled.div`
   }
 
   > p {
-    color: ${colors.darkGray};
     margin-top: 0.6rem;
   }
 `

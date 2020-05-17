@@ -9,7 +9,6 @@ import {
   StyledForm,
   FormGroup,
   Button,
-  ImageContainer,
   ButtonContainer,
 } from "./styles"
 
@@ -17,17 +16,9 @@ export default function Contact() {
   const { sendEmail } = useEmail()
 
   const {
-    contactImage,
     allServicesJson: { nodes: services },
   } = useStaticQuery(graphql`
     query {
-      contactImage: file(relativePath: { eq: "women-talk.jpeg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       allServicesJson {
         nodes {
           id
@@ -40,10 +31,8 @@ export default function Contact() {
   return (
     <Container id="contact">
       <Content>
-        <ImageContainer
-          fluid={contactImage.childImageSharp.fluid}
-          alt="Two women talking to each other."
-        />
+        <h3>Gostou da Susa Remota e gostaria de contratar nossos serviços?</h3>
+        <span>Deixe seus dados aqui que entraremos em contato.</span>
 
         <Formik
           initialValues={{
@@ -61,34 +50,78 @@ export default function Contact() {
               setSubmitting(false)
             }
           }}
+          validate={({ name, email, service, description }) => {
+            const errors = {}
+
+            if (!name) errors.name = "O campo nome é obrigatório."
+            if (!email) errors.email = "O campo email é obrigatório."
+            if (!service) errors.service = "O campo serviço é obrigatório."
+            if (!description)
+              errors.description = "O campo descrição é obrigatório."
+
+            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email))
+              errors.email = "O campo email possui um valor inválido."
+
+            return errors
+          }}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, errors, touched, isValidating }) => (
             <StyledForm>
-              <FormGroup>
-                <label htmlFor="name">Nome</label>
+              <FormGroup
+                error={errors.name && touched.name ? errors.name : null}
+              >
+                <label htmlFor="name">
+                  Nome
+                  <span>*</span>
+                </label>
                 <Field name="name" />
+                {errors.name && <small>{errors.name}</small>}
               </FormGroup>
-              <FormGroup>
-                <label htmlFor="email">Email</label>
-                <Field name="email" type="email" />
+              <FormGroup
+                error={errors.email && touched.email ? errors.email : null}
+              >
+                <label htmlFor="email">
+                  Email
+                  <span>*</span>
+                </label>
+                <Field name="email" />
+                {errors.email && <small>{errors.email}</small>}
               </FormGroup>
-              <FormGroup>
-                <label htmlFor="service">Serviço</label>
+              <FormGroup
+                error={
+                  errors.service && touched.service ? errors.service : null
+                }
+              >
+                <label htmlFor="service">
+                  Serviço
+                  <span>*</span>
+                </label>
                 <Field name="service" as="select">
-                  <option value="" label="Selecione um serviço" />
+                  <option value="" label="Selecione um serviço" disabled />
                   {services.map(service => (
                     <option key={service.id} value={service.name}>
                       {service.name}
                     </option>
                   ))}
                 </Field>
+                {errors.service && <small>{errors.service}</small>}
               </FormGroup>
-              <FormGroup>
-                <label htmlFor="description">Descrição</label>
+              <FormGroup
+                error={
+                  errors.description && touched.description
+                    ? errors.description
+                    : null
+                }
+              >
+                <label htmlFor="description">
+                  Descrição
+                  <span>*</span>
+                </label>
                 <Field name="description" as="textarea" rows={4} />
+                {errors.description && <small>{errors.description}</small>}
               </FormGroup>
               <ButtonContainer>
-                <Button type="submit" disabled={isSubmitting}>
+                <Button type="submit" disabled={isSubmitting || isValidating}>
                   Enviar
                 </Button>
               </ButtonContainer>
