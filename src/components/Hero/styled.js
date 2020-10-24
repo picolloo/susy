@@ -23,6 +23,8 @@ export const HeroCTA = styled.section`
   flex-direction: column;
   margin-top: 0.5rem;
   flex-basis: 45%;
+  align-items: flex-end;
+  margin-right: 1rem;
 
   > h1 {
     font-size: 7vw;
